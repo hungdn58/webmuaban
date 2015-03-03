@@ -65,7 +65,9 @@
           </div>
       </div>
       <div class="chatboxcontent">
+        <% if @conversation.messages.nil? %>
           <%= render @messages %>
+        <% end %>
       </div>
       <div class="chatboxinput">
         <%= form_for([@conversation, @message], :remote => true, :html => { id: "conversation_form_#{@conversation.id}"}) do |f| %>
