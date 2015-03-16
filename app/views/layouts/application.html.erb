@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
-<title>-h0angnhat-</title>
+<title>Tất Tần Tật</title>
 <link rel="stylesheet" href="/assets/stylesheets/application.css.scss">
- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<%= stylesheet_link_tag "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
 <div id = "website">
@@ -41,25 +34,13 @@
 			<li><a href="http://localhost:3000/" style="text-decoration:none;">Home</a></li>
 			<li><a href="http://localhost:3000/store/index"style="text-decoration:none;">Catalog</a></li>
 			<li><a href="http://localhost:3000/products"style="text-decoration:none;">Product</a></li>
-			<li><a href="http://localhost:3000/carts"style="text-decoration:none;">MyCart</a></li>
-			<li><a href="http://localhost:3000/users"style="text-decoration:none;">Messages</a></li>
-			<li><a href="http://www..../contact"style="text-decoration:none;"><%= 1.hour.from_now %></a></li>
+			<li><a href="http://localhost:3000/carts"style="text-decoration:none;">MyCart</a></li><br>
+			<li><a href="http://www..../contact"style="text-decoration:none;">Contact Us</a></li>
 		</ul>
 	</div>
+	<div id="main">
+		<%= yield %>
+	</div>
 </div>
-<%= render 'layouts/nav' %>
-
-<div class="container">
-  <% if alert %>
-      <div class="alert alert-danger" role="alert"><%= alert %></div>
-  <% end %>
-  <% if notice %>
-      <div class="alert alert-success" role="alert"><%= notice %></div>
-  <% end %>
-
-
-  <%= yield %>
-</div>
-<audio id="chatAudio"><source src="/sounds/notification.mp3" type="audio/mpeg"></audio>
 </body>
 </html>
