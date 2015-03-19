@@ -9,6 +9,7 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 #Đề tài : Trang web cần mua.
 #Ngôn ngữ : Ruby 2.0.0 (ngôn ngữ chính); html,css(ngôn ngữ phụ - dùng để thiết kế, làm đẹp giao diện)
 #Framework : Rails - version 4.2.0
+#Công cụ phát triển : Sublime Text 
 
 #Điều kiện để chạy chương trình lần này : Máy phải cài Ruby on Rails(bất kì phiên bản) và một công cụ đê chạy server client(vd: MySQL Server, Wampserver, Xamp,...)
 (Do chưa tìm được host nên chương trình mình vẫn chạy trên client server cho nên mới phải cài các phần mềm trên)
