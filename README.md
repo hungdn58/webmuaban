@@ -51,9 +51,10 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
       Then the result should be the page with the notify that I have successful create new user
 
 
-#Link video báo cao : https://youtu.be/BEtk1sjzyrA
+#Link video báo cáo : 
++ Sprint 2: https://youtu.be/BEtk1sjzyrA
 
 #Link biên bản họp: 
 + Lần 1 : https://docs.google.com/document/d/1sgWrxIkFCB3A7lOqx869b3K8gExd5ncLFZ7RKTwixwM/edit?usp=sharing
 + Lần 2 : https://docs.google.com/document/d/1GKUS6HM4G-Mtw6YxD6T_6YXxQ2uf3WCXNuV_cQgM5wI/edit?usp=sharing
-Biên bản lần 3 sẽ được cập nhật ngay sau khi họp xong 
++ Biên bản lần 3 sẽ được cập nhật ngay sau khi họp xong 
