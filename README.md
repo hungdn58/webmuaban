@@ -1,7 +1,8 @@
 # webmuaban
 Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 
-#Các thành viên : 1-Cao Minh Lâm
+#Các thành viên : 
+             1-Cao Minh Lâm
 				 2-Đỗ Ngọc Hùng (Nhóm trưởng)
 				 3-Trần Đồng Hưng
 				 4-Vũ Ngọc Đức
@@ -9,10 +10,6 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 #Đề tài : Trang web cần mua.
 #Ngôn ngữ : Ruby 2.0.0 (ngôn ngữ chính); html,css(ngôn ngữ phụ - dùng để thiết kế, làm đẹp giao diện)
 #Framework : Rails - version 4.2.0
-<<<<<<< HEAD
-=======
-#Công cụ phát triển : Sublime Text 
->>>>>>> 131bf370a275e678ae15650b184fcdf0c7788949
 
 #Điều kiện để chạy chương trình lần này : Máy phải cài Ruby on Rails(bất kì phiên bản) và một công cụ đê chạy server client(vd: MySQL Server, Wampserver, Xamp,...)
 (Do chưa tìm được host nên chương trình mình vẫn chạy trên client server cho nên mới phải cài các phần mềm trên)
@@ -54,19 +51,25 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
       When I press Create User
       Then the result should be the page with the notify that I have successful create new user
 
+#Mục tiêu sprint 3 : Tạo form đăng sản phẩm cần mua.      
 
-<<<<<<< HEAD
-#Link video báo cao : https://youtu.be/BEtk1sjzyrA
-=======
-#Link video báo cáo : 
-+ Sprint 2: https://youtu.be/BEtk1sjzyrA
->>>>>>> 131bf370a275e678ae15650b184fcdf0c7788949
+#User story: As a registered user, I want to post something I want to buy, so that everyone can see and contact to me.
+
+.Feature: Post
+   In order to post something
+   As a registered user
+   I want to see the page contains my post
+
+   Scenario: Post
+      Given I have logged in into the website
+      And I have entered my name and the product that I want to buy in each field
+      When I press the button 'Create Post'
+      Then the result should be the page with my post and the comment field
+
+
+#Link video báo cáo : https://youtu.be/BEtk1sjzyrA
 
 #Link biên bản họp: 
 + Lần 1 : https://docs.google.com/document/d/1sgWrxIkFCB3A7lOqx869b3K8gExd5ncLFZ7RKTwixwM/edit?usp=sharing
 + Lần 2 : https://docs.google.com/document/d/1GKUS6HM4G-Mtw6YxD6T_6YXxQ2uf3WCXNuV_cQgM5wI/edit?usp=sharing
-<<<<<<< HEAD
-Biên bản lần 3 sẽ được cập nhật ngay sau khi họp xong 
-=======
-+ Biên bản lần 3 sẽ được cập nhật ngay sau khi họp xong 
->>>>>>> 131bf370a275e678ae15650b184fcdf0c7788949
++ Làn 3 : https://docs.google.com/document/d/1VLB88cEn9HrtZrLx1JrV8ehFrQ-i2AWLzRmaUHxOqzw/edit?usp=sharing
