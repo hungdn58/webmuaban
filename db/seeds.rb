@@ -7,59 +7,48 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.delete_all
 # ...
-Product.create(title: 'Programming Ruby 1.9',
+Product.create(title: 'Laptop Asus',
 	description:
 		%{<p>
-			Ruby is the fastest growing and most exciting dynamic language
-			out there. If you need to get working programs delivered fast,
-			you should add Ruby to your toolbox.hom nay em mo gap bac ho , bac cam trong tay chiec banh mi to
-			ngoi ben em thay buon qua di thoi
+			Laptop này tuy đã dùng rồi nhưng đảm bảo nguyên đai nguyên kiện,
+			mới đến 95%, dùng vẫn mượt như lúc mới mua.
 		</p>},
-		image_url: '1.jpg',
-		price: 49.95)
-Product.create(title: 'Ngọc Hùng',
+		image_url: 'Asus F550DP.jpg',
+		price: 125)
+Product.create(title: 'Xe Dream Thái',
 	description:
 		%{<p>
-			Ruby is the fastest growing and most exciting dynamic language
-			out there. If you need to get working programs delivered fast,
-			you should add Ruby to your toolbox.
+			Xe này đã đi được 1 vạn cây số nhưng động cơ, hộp số vẫn trơn tru,
+			xe đi vẫn êm và không bị ì.
 		</p>},
-		image_url: '11.jpg',
-		price: 49.95)
-Product.create(title: 'Hoàng Nhật',
+		image_url: 'dream1.jpg',
+		price: 330)
+Product.create(title: 'Giày Nike',
 	description:
 		%{<p>
-			Ruby is the fastest growing and most exciting dynamic language
-			out there. If you need to get working programs delivered fast,
-			you should add Ruby to your toolbox.
+			Giày Nike chính hãng đảm bảo mới 100%, giá cả phải chăng.
 		</p>},
-		image_url: 'hoangnhat.jpg',
-		price: 49.95)
-Product.create(title: 'Thiện Nhân',
+		image_url: 'giayNike.jpg',
+		price: 50)
+Product.create(title: 'Dầu ăn Neptune',
 	description:
 		%{<p>
-			Ruby is the fastest growing and most exciting dynamic language
-			out there. If you need to get working programs delivered fast,
-			you should add Ruby to your toolbox.
+			Dầu ăn Neptune với tỉ lệ vàng 1:1:1 tốt cho sức khỏe và tim mạch.
 		</p>},
-		image_url: '17.jpg',
-		price: 49.95)
-Product.create(title: 'Chị xinh xinh G2',
+		image_url: 'Neptune.jpg',
+		price: 12)
+Product.create(title: 'Quần áo thể thao',
 	description:
 		%{<p>
-			Ruby is the fastest growing and most exciting dynamic language
-			out there. If you need to get working programs delivered fast,
-			you should add Ruby to your toolbox.
+			Bộ quần áo thể thao đầy nam tính và mạnh mẽ dành cho các bạn nam chơi thể thao.
 		</p>},
-		image_url: '17.jpg',
-		price: 49.95)
-Product.create(title: 'Ví Dụ',
+		image_url: 'dongphucthethaonam.jpg',
+		price: 20)
+Product.create(title: 'Nước rửa bát',
 	description:
 		%{<p>
-			Ruby is the fastest growing and most exciting dynamic language
-			out there. If you need to get working programs delivered fast,
-			you should add Ruby to your toolbox.
+			Nước rửa bát Sunlight đánh bật mọi vết bẩn bám trên bề mặt bát đĩa, kể cả vết dầu mỡ và trên đồ nhựa
 		</p>},
-		image_url: '15.jpg',
-		price: 49.95)
+		image_url: 'Sunlight.jpg',
+		price: 10)
 #...

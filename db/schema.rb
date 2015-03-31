@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203162941) do
+ActiveRecord::Schema.define(version: 20150331084804) do
 
   create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "post_id"
+    t.text     "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -25,6 +32,13 @@ ActiveRecord::Schema.define(version: 20150203162941) do
     t.datetime "updated_at",                                     null: false
     t.integer  "quantity",                           default: 1
     t.decimal  "price",      precision: 8, scale: 2
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "name"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -40,19 +54,12 @@ ActiveRecord::Schema.define(version: 20150203162941) do
     t.datetime "image_updated_at"
   end
 
-  create_table "profiles", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "name"
-    t.date     "birthday"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
+    t.string   "name"
     t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

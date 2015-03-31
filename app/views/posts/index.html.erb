@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<br>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <p>
+          <%= post.name %> : <%= link_to post.text, post %>
+        </p>
+        <p>(<%= time_ago_in_words post.created_at %> ago)</p><br>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
