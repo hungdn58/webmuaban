@@ -15,7 +15,7 @@
     <% @posts.each do |post| %>
       <tr>
         <p>
-          <%= post.name %> : <%= link_to post.text, post %>
+          <%= post.user.name %> : <%= link_to post.name, post %>
         </p>
         <p>(<%= time_ago_in_words post.created_at %> ago)</p><br>
       
