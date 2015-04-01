@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  get 'comments/create'
-
-  get 'comments/destroy'
 
   resources :posts do
     resources :comments, :only => [:create]
   end
 
-=======
->>>>>>> 131bf370a275e678ae15650b184fcdf0c7788949
   get 'admin' => 'admin#index' 
   controller :sessions do 
     get 'login' => :new 

@@ -1,10 +1,10 @@
 class ProductsController < ApplicationController
-<<<<<<< HEAD
+
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter :authorize
-=======
+
   #before_action :set_product, only: [:show, :edit, :update, :destroy]
->>>>>>> 131bf370a275e678ae15650b184fcdf0c7788949
+
 
   # GET /products
   # GET /products.json

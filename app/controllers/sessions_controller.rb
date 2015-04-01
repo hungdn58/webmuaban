@@ -1,9 +1,8 @@
 class SessionsController < ApplicationController
-<<<<<<< HEAD
+
 	skip_before_filter :authorize
-=======
+
 	#skip_before_filter :authorize
->>>>>>> 131bf370a275e678ae15650b184fcdf0c7788949
 
   def new
   end
