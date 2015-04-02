@@ -1,9 +1,6 @@
 class CartsController < ApplicationController
-<<<<<<< HEAD
   skip_before_filter :authorize, only: [:create, :update, :destroy] 
-=======
   #skip_before_filter :authorize, only: [:create, :update, :destroy] 
->>>>>>> 131bf370a275e678ae15650b184fcdf0c7788949
 
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart

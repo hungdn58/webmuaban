@@ -19,6 +19,14 @@
     <%= f.label :text %><br>
     <%= f.text_area :text, :size => '40x5' %>
   </div>
+  <h2> Image </h2>
+  <%= f.fields_for :photos, @post.photos.build do |photo| %>
+    <div class="field">
+      <%= photo.label :image %>
+      <%= photo.file_field :image %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
