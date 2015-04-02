@@ -22,6 +22,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post.photos.build
   end
 
   # POST /posts
@@ -44,6 +45,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    @post.photos.clear
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Your post has been updated.' }
