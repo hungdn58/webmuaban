@@ -2,7 +2,7 @@
 Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 
 #Các thành viên : 
-             1-Cao Minh Lâm
+ 1-Cao Minh Lâm
 				 2-Đỗ Ngọc Hùng (Nhóm trưởng)
 				 3-Trần Đồng Hưng
 				 4-Vũ Ngọc Đức
