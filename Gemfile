@@ -9,6 +9,9 @@ gem 'bootstrap-sass'
 group :production do
   gem 'rack-cache', :require => 'rack/cache'
 end
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+end
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
