@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20150402090616) do
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"

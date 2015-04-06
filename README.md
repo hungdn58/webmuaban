@@ -67,7 +67,8 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
       Then the result should be the page with my post and the comment field
 
 
-#Link video báo cáo : https://youtu.be/BEtk1sjzyrA
+#Link video báo cáo : 
++ Sprint 2 : https://youtu.be/BEtk1sjzyrA
 
 #Link biên bản họp: 
 + Lần 1 : https://docs.google.com/document/d/1sgWrxIkFCB3A7lOqx869b3K8gExd5ncLFZ7RKTwixwM/edit?usp=sharing

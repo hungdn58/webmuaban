@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :comments, :only => [:create]
   end
   resources :photos, only: [:new, :create, :index]
-  get 'admin' => 'admin#index' 
+  get 'admin' => 'posts#index' 
   controller :sessions do 
     get 'login' => :new 
     post 'login' => :create 
