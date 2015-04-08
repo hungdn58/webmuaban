@@ -66,6 +66,11 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
       When I press the button 'Create Post'
       Then the result should be the page with my post and the comment field
 
+#Mục tiêu sprint 4 : Tạo profile cho người dùng và nhận thông báo khi có comment.
+
+#User story: 
++ As a registered user, I want to have my private profile, so that I can fill information about me.
++ As a registered user, I want to receive a notification when somebody comments on my posts, so that I can know when    somebody care about my posts.	 
 
 #Link video báo cáo : 
 + Sprint 2 : https://youtu.be/BEtk1sjzyrA
