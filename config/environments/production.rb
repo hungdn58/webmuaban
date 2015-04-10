@@ -8,6 +8,22 @@ Rails.application.configure do
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: "587",
+    domain: "gmail.com",
+    authenticaton: "plain",
+    enable_starttls_auto: true,
+    user_name: "tattantat7@gmail.com",
+    password: "rubyteam123"
+  }
   config.eager_load = true
   config.paperclip_defaults = {
     :storage => :s3,

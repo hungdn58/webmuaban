@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :comments
+
   devise_for :users
   resources :line_items
 
@@ -27,6 +29,14 @@ Rails.application.routes.draw do
  
   resources :conversations do
     resources :messages
+  end
+
+  resources :products do
+    resources :comments
+  end
+
+  resources :users do
+    resources :comments, :only => [:create]
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
