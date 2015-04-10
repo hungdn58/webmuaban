@@ -9,7 +9,7 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'ngochung.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
