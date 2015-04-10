@@ -1,18 +1,5 @@
 Rails.application.routes.draw do
-
-  resources :posts do
-    resources :comments, :only => [:create]
-  end
-  resources :photos, only: [:new, :create, :index]
-  get 'admin' => 'posts#index' 
-  controller :sessions do 
-    get 'login' => :new 
-    post 'login' => :create 
-    delete 'logout' => :destroy 
-  end 
-
-  get 'signup' => 'users#new'
-
+  devise_for :users
   resources :users
 
   resources :line_items
@@ -21,14 +8,27 @@ Rails.application.routes.draw do
 
   get 'catalog' => 'store#index'
 
+  get 'store/index'
+
   resources :products
+
+  get 'user/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root to: 'store#index', as: 'store'
+  #root to: 'store#index', as: 'store'
+  authenticated :user do
+    root 'store#index'
+  end
+ 
+  unauthenticated :user do
+    devise_scope :user do
+      get "/" => "devise/sessions#new"
+    end
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

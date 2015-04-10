@@ -3,9 +3,9 @@
 <head>
 <title>Tất Tần Tật</title>
 <link rel="stylesheet" href="/assets/stylesheets/application.css.scss">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+<%= stylesheet_link_tag "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
 <div id = "website">
@@ -19,21 +19,27 @@
 		</ul>
 	</div>
 	<div id = "top-right">
-		<% if session[:user_id] %>
 		<ul>
-			<li><%= link_to 'User', users_path %></li>
+		<% if user_signed_in? %>
+            <li>
+              <%= link_to "Hi, #{current_user.name}" %>
+            </li>
+            <li>|</li>
+            <li>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete	  %>
+            </li>
+        <% else %>
+        	<li><img src ="/assets/login1.png" /></li>
 			<li>|</li>
-			<li><%= link_to 'Logout', logout_path, method: :delete %></li>
-		</ul>
-		<% else %>
-		<ul>
-			<li><img src ="/assets/login1.png" /></li>
-			<li>|</li>
-			<li><a href = "http://localhost:3000/login">Login</a></li>
-			<li>|</li>
-			<li><a href = "http://localhost:3000/signup">sign up</a></li>
-		</ul>
-		<% end %>
+            <li>
+              <%= link_to "Login", new_user_session_path %>
+            </li>
+            <li>|</li>
+            <li>
+              <%= link_to "Signup", new_user_registration_path %>
+            </li>
+        <% end %>
+        </ul>
 	</div>
 </div>
 <div id = "columns">
@@ -42,15 +48,10 @@
 			<li><a href="http://localhost:3000/" style="text-decoration:none;">Home</a></li>
 			<li><a href="http://localhost:3000/catalog"style="text-decoration:none;">Catalog</a></li>
 			<li><a href="http://localhost:3000/products"style="text-decoration:none;">Product</a></li>
-
-			<li><a href="http://localhost:3000/posts"style="text-decoration:none;">Post</a></li>
-
 			<li><a href="http://localhost:3000/carts"style="text-decoration:none;">MyCart</a></li><br>
 			<li><a href="http://www..../contact"style="text-decoration:none;">Contact Us</a></li>
-
 		</ul>
 	</div>
-
 	<div id="main">
 		<%= yield %>
 	</div>

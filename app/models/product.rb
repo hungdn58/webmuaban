@@ -12,6 +12,8 @@ class Product < ActiveRecord::Base
 		"#{title} - #{description}"
 	end
 	# attr_accessible :image
+  	has_attached_file :image, :styles => { :medium => "620x620>", :thumb => "200x200>" }
+  	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 	has_many :line_items
 	before_destroy :ensure_not_referenced_by_any_line_item
 	private
