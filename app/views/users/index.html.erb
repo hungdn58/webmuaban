@@ -38,8 +38,8 @@
       <% if @conversations.any? %>
           <ul class="media-list">
             <% @conversations.each do |conversation| %>
-                <li class="media">
-                  <%= gravatar_for conversation_interlocutor(conversation) %>
+                <li class="media">conversation
+                  <%= gravatar_for message.sender, { size: 45 } %>
                   <div class="media-body">
                     <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
                         <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
