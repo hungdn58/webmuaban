@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  #before_filter :authorize
-
+  before_action :authenticate_user!
   # GET /products
   # GET /products.json
   def index
@@ -12,6 +11,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @product }

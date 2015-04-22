@@ -1,60 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Tất Tần Tật</title>
-<link rel="stylesheet" href="/assets/stylesheets/application.css.scss">
-<%= stylesheet_link_tag "application", :media => "all" %>
-<%= javascript_include_tag "application" %>
-<%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
+ 
+  <title>-h0angnhat-</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+ 
+  <!-- shiv here -->
 </head>
-<body class='<%= controller.controller_name %>'>
-<div id = "website">
-<div id = "banner" >
-	<%= @page_title || ".:Tất Tần Tật:." %>
-	<div id = "top-left">
-		<ul>
-			<li><a href = "http://www.facebook.com"><img Src ="/assets/facebook.png"/></a></li>
-			<li><a href = "https://mail.google.com/"><img Src ="/assets/gmail.png"/></a></li>
-			<li><a href = "https://vn.yahoo.com"><img Src ="/assets/yahoo.png"/></a></li>
-		</ul>
-	</div>
-	<div id = "top-right">
-		<ul>
-		<% if user_signed_in? %>
-            <li>
-              <%= link_to "Hi, #{current_user.name}" %>
-            </li>
-            <li>|</li>
-            <li>
-              <%= link_to "Logout", destroy_user_session_path, method: :delete	  %>
-            </li>
-        <% else %>
-        	<li><img src ="/assets/login1.png" /></li>
-			<li>|</li>
-            <li>
-              <%= link_to "Login", new_user_session_path %>
-            </li>
-            <li>|</li>
-            <li>
-              <%= link_to "Signup", new_user_registration_path %>
-            </li>
-        <% end %>
-        </ul>
-	</div>
+ 
+<body>
+ 
+<%= render 'layouts/nav' %>
+ 
+<div class="container">
+  <!-- flash messages here -->
+  <%= yield %>
 </div>
-<div id = "columns">
-	<div id = "side">
-		<ul>
-			<li><a href="http://localhost:3000/" style="text-decoration:none;">Home</a></li>
-			<li><a href="http://localhost:3000/catalog"style="text-decoration:none;">Catalog</a></li>
-			<li><a href="http://localhost:3000/products"style="text-decoration:none;">Product</a></li>
-			<li><a href="http://localhost:3000/carts"style="text-decoration:none;">MyCart</a></li><br>
-			<li><a href="http://www..../contact"style="text-decoration:none;">Contact Us</a></li>
-		</ul>
-	</div>
-	<div id="main">
-		<%= yield %>
-	</div>
-</div>
-</body>
-</html>
+<audio id="chatAudio"><source src="/uploads/2.mp3" type="audio/mpeg"></audio>

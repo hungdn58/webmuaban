@@ -12,17 +12,17 @@ class Product < ActiveRecord::Base
 		"#{title} - #{description}"
 	end
 	# attr_accessible :image
-  	has_attached_file :image, :styles => { :medium => "620x620>", :thumb => "200x200>" }
-  	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 	has_many :line_items
+	belongs_to :user
+	has_many :comments
 	before_destroy :ensure_not_referenced_by_any_line_item
 	private
 		def ensure_not_referenced_by_any_line_item	
-				if line_items.empty?
-					return true
-				else
-					errors.add(:base, 'Line Items present')
-					return false
-				end
+			if line_items.empty?
+				return true
+			else
+				errors.add(:base, 'Line Items present')
+				return false
 			end
+		end
 end

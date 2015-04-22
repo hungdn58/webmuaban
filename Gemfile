@@ -12,18 +12,15 @@ group :development do
 end
 
 group :production do
-  gem 'rack-cache', :require => 'rack/cache'
+  gem 'rails_12factor'
+  gem 'pg'
 end
+
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end
 group :test do
   gem 'capybara'
-end
-
-group :production do
-  gem 'rails_12factor'
-  gem 'pg'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -43,9 +40,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
-gem 'bcrypt-ruby', '~> 3.1.5'
-
+# gem 'bcrypt', '~> 3.1.7'
+gem 'aws-sdk'
 gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
@@ -55,7 +51,8 @@ gem 'private_pub'
 gem 'thin'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem "heroku"
+gem 'gravatar_image_tag'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

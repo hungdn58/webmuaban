@@ -15,8 +15,16 @@
   	<%= image_tag @product.image_url, class: 'show_image'%>
 </p>
 
-
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 
+<h2>Comments</h2>
+<div id="comments">
+   <%= render :partial => @product.comments %>
+ </div>
+<%= render '/comments/form'%>

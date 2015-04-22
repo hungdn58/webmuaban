@@ -1,6 +1,5 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
-  #before_filter :authorize
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
   # GET /carts
    def invalid_cart
