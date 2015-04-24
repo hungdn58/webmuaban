@@ -6,6 +6,29 @@ describe User do
   	user.should_not be_valid
   end
 
+  it "is valid" do
+    user = User.new(name: "Ngoc Hung", email: "trhung1710@gmail.com", password: "12345678")
+    user.should be_valid
+  end
+
+  it "is invalid with fail fomat email" do
+    user = User.new(name: "Ngoc Hung", email: "trhung1710", password: "12345678")
+    user.should_not be_valid
+  end
+
+  it "is invalid with password too short" do
+    user = User.new(name: "Ngoc Hung", email: "trhung1710@gmail.com", password: "1234567")
+    user.should_not be_valid
+  end
+
+  it "compare id" do
+    user1 = User.new(name: "Ngoc Hung", email: "trhung1710@gmail.com", password: "12345678")
+    user2 = User.new(name: "Ngoc Hung", email: "trhung1711@gmail.com", password: "12345678")
+    user1.save
+    user2.save
+    expect(user1.id).should_not eq user2.id
+  end
+
   it "has a name that matches 'Ngoc Hung'" do
   	user = User.new(name: "Ngoc Hung 1")
   	user.name.should match(/Ngoc Hung \d/)
@@ -21,11 +44,9 @@ describe User do
   end
 
   it "changes the number of User" do
-  	user = User.new(name: "Ngoc Hung")
-  	pending "Lỗi khó hiểu, sẽ xử lý sau"
-  	expect(user.save).to be_falsey 
+  	user = User.new(name: "Ngoc Hung", email: "trhung1710@gmail.com", password: "12345678")
+  	expect(user.save).to be_truthy
   	expect { user.save }.to change { User.count }.from(0).to(1)
-  	pending
   end
 
   it "raises an error if save user without require attributes" do
