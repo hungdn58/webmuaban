@@ -11,6 +11,12 @@
 </p>
 
 <p>
+<<<<<<< HEAD
+=======
+  <strong>Image url:</strong>
+  	<%= image_tag @product.image_url, class: 'show_image'%>
+</p>
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 
 <p>
   <strong>Price:</strong>
@@ -20,6 +26,7 @@
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 
+<<<<<<< HEAD
 <h2> Image </h2>
 <% if @product.photos.any? %>
 	<% @product.photos.each do |photo| %>
@@ -37,10 +44,13 @@
 <%= link_to 'Back', products_path %>
 <%= link_to "Delete", @product, method: :delete, data: { confirm: 'Are you sure?' } %>
 
+=======
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 <h2>Comments</h2>
 <div id="comments">
    <%= render :partial => @product.comments %>
  </div>
+<<<<<<< HEAD
 <%= render '/comments/form'%>
 
 <script>
@@ -51,3 +61,6 @@
     setTimeout("refressPage();", 10000);  
   })
 </script>
+=======
+<%= render '/comments/form'%>
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef

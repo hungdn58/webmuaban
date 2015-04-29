@@ -11,8 +11,11 @@ Rails.application.routes.draw do
   resources :products
   resources :users
   get 'user/index'
+<<<<<<< HEAD
 
   resources :photos, only: [:new, :create, :index]
+=======
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

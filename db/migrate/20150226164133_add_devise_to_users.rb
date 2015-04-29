@@ -1,7 +1,13 @@
 class AddDeviseToUsers < ActiveRecord::Migration
+<<<<<<< HEAD
   def change
     change_table(:users) do |t| 
       t.boolean :confirmable, :default => false
+=======
+   def change
+    change_table(:users) do |t| 
+      t.confirmable 
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
     end
   end
   def self.up

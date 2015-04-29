@@ -9,10 +9,17 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
   config.action_mailer.raise_delivery_errors = true
+<<<<<<< HEAD
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com" "smtp.vnu.edu.vn",
+=======
+  config.action_mailer.default_url_options = { :host => 'ngochung.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
     port: 587,
     domain: "gmail.com",
     authenticaton: "plain",

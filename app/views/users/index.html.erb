@@ -42,7 +42,11 @@
                   <%= gravatar_for conversation.sender, { size: 45 } %>
                   <div class="media-body">
                     <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
+<<<<<<< HEAD
                         <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
+=======
+                        <h4 class="media-heading"><%= conversation.recipient.name %></h4>
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
                         <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
                   </div>
                 </li>

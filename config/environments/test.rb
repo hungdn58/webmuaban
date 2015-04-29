@@ -11,7 +11,11 @@ Rails.application.configure do
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
+<<<<<<< HEAD
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+=======
+
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
   # Configure static file server for tests with Cache-Control for performance.
   config.serve_static_files   = true
   config.static_cache_control = 'public, max-age=3600'

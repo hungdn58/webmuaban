@@ -3,6 +3,7 @@
 <% @products.each do |product| %>
 <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 <td>
+<<<<<<< HEAD
 <% if product.photos.any? %>
 	<% product.photos.each do |photo| %>
 	<ul class="row" id="photos-list">
@@ -15,6 +16,10 @@
 <% else %>
 	<p> No Image </p>
 <% end %>
+=======
+<%= image_tag(product.image_url, class: 'list_image') %>
+</td>
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 <td class="list_description">
 <dl>
 <dt><%= product.title %></dt>

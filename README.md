@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # webmuaban
 Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 
@@ -81,3 +82,17 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 + Lần 1 : https://docs.google.com/document/d/1sgWrxIkFCB3A7lOqx869b3K8gExd5ncLFZ7RKTwixwM/edit?usp=sharing
 + Lần 2 : https://docs.google.com/document/d/1GKUS6HM4G-Mtw6YxD6T_6YXxQ2uf3WCXNuV_cQgM5wI/edit?usp=sharing
 + Làn 3 : https://docs.google.com/document/d/1VLB88cEn9HrtZrLx1JrV8ehFrQ-i2AWLzRmaUHxOqzw/edit?usp=sharing
+=======
+<<<<<<< HEAD
+# myapp
+hehe
+=======
+<<<<<<< HEAD
+# webmuaban
+Bài thực hành môn công nghệ phần mềm của nhóm Ruby
+=======
+# tattantat
+hehe
+>>>>>>> 0ef360d9cc55b26e58922c6ad27b78456b6424bd
+>>>>>>> first commit
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef

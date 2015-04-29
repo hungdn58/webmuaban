@@ -15,6 +15,7 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+<<<<<<< HEAD
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
@@ -22,6 +23,8 @@ end
 group :test do
   gem 'capybara'
 end
+=======
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -45,6 +48,7 @@ gem 'aws-sdk'
 gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
+<<<<<<< HEAD
 
 # upload file with dragonfly
 gem 'dragonfly'
@@ -52,6 +56,8 @@ gem 'dragonfly-s3_data_store'
 group :production do
   gem 'rack-cache', :require => 'rack/cache'
 end
+=======
+>>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'private_pub'
