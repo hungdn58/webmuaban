@@ -1,7 +1,7 @@
 class AddDeviseToUsers < ActiveRecord::Migration
-   def change
+  def change
     change_table(:users) do |t| 
-      t.confirmable 
+      t.boolean :confirmable, :default => false
     end
   end
   def self.up
