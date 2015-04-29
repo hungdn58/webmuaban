@@ -9,11 +9,7 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.action_mailer.raise_delivery_errors = true
-<<<<<<< HEAD
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-=======
-  config.action_mailer.default_url_options = { :host => 'ngochung.herokuapp.com' }
->>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
@@ -45,11 +41,10 @@ Rails.application.configure do
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like
   # NGINX, varnish or squid.
-<<<<<<< HEAD
+
   config.action_dispatch.rack_cache = true
-=======
+
   # config.action_dispatch.rack_cache = true
->>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
