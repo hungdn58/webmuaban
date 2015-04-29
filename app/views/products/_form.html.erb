@@ -20,13 +20,17 @@
     <%= f.text_area :description, row: 20%>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br>
-    <%= file_field(:product, :image_url) %>
-  </div>
-  <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
+  <h2> Image </h2>
+  <%= f.fields_for :photos, @product.photos.build do |photo| %>
+    <div class="field">
+      <%= photo.label :image %>
+      <%= photo.file_field :image %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -21,11 +21,8 @@ describe User do
   end
 
   it "changes the number of User" do
-  	user = User.new(name: "Ngoc Hung")
-  	pending "Lỗi khó hiểu, sẽ xử lý sau"
-  	expect(user.save).to be_falsey 
+  	user = User.new(name: "Ngoc Hung", email: "hoangnhat1090@gmail.com" , password: "2172372834")
   	expect { user.save }.to change { User.count }.from(0).to(1)
-  	pending
   end
 
   it "raises an error if save user without require attributes" do

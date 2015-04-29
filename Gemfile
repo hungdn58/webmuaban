@@ -45,6 +45,13 @@ gem 'aws-sdk'
 gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
+
+# upload file with dragonfly
+gem 'dragonfly'
+gem 'dragonfly-s3_data_store'
+group :production do
+  gem 'rack-cache', :require => 'rack/cache'
+end
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'private_pub'

@@ -11,9 +11,6 @@
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  	<%= image_tag @product.image_url, class: 'show_image'%>
-</p>
 
 <p>
   <strong>Price:</strong>
@@ -23,8 +20,34 @@
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 
+<h2> Image </h2>
+<% if @product.photos.any? %>
+	<% @product.photos.each do |photo| %>
+	<ul class="row" id="photos-list">
+    	<li class="col-xs-3">
+      	<%= link_to image_tag(photo.image.thumb('180x180#').url, class: 'img-thumbnail'),
+        	photo.image.url, target: '_blank' %>
+    	</li>
+	</ul>
+<% end %>
+<% else %>
+	<p> No Image </p>
+<% end %>
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+<%= link_to "Delete", @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+
 <h2>Comments</h2>
 <div id="comments">
    <%= render :partial => @product.comments %>
  </div>
 <%= render '/comments/form'%>
+
+<script>
+  function refressPage(){
+    location.reload(true) //load tu server, khong load tu cache
+  }
+  $(document).ready(function() {
+    setTimeout("refressPage();", 10000);  
+  })
+</script>

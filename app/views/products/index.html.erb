@@ -3,8 +3,18 @@
 <% @products.each do |product| %>
 <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 <td>
-<%= image_tag(product.image_url, class: 'list_image') %>
-</td>
+<% if product.photos.any? %>
+	<% product.photos.each do |photo| %>
+	<ul class="row" id="photos-list">
+    	<li class="col-xs-3">
+      	<%= link_to image_tag(photo.image.thumb('180x180#').url, class: 'img-thumbnail'),
+        	photo.image.url, target: '_blank' %>
+    	</li>
+	</ul>
+<% end %>
+<% else %>
+	<p> No Image </p>
+<% end %>
 <td class="list_description">
 <dl>
 <dt><%= product.title %></dt>
