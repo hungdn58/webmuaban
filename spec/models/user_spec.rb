@@ -44,12 +44,8 @@ describe User do
   end
 
   it "changes the number of User" do
-<<<<<<< HEAD
   	user = User.new(name: "Ngoc Hung", email: "hoangnhat1090@gmail.com" , password: "2172372834")
-=======
   	user = User.new(name: "Ngoc Hung", email: "trhung1710@gmail.com", password: "12345678")
-  	expect(user.save).to be_truthy
->>>>>>> 1a6f1e3e68c6efb2c196783ec592c25318ba5bfb
   	expect { user.save }.to change { User.count }.from(0).to(1)
   end
 

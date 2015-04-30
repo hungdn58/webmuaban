@@ -17,7 +17,6 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
-<<<<<<< HEAD
 #photos-list {
   padding: 0;
   margin: 0;
@@ -38,9 +37,7 @@
     }
   }
 }
-=======
 
->>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 	a{
 	text-decoration: none;
 }

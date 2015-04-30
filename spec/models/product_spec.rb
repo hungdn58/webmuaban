@@ -22,12 +22,6 @@ require 'spec_helper'
    	expect(product.errors[:description]).to include("can't be blank")
    end
 
-   it "is invalid without an image_url" do
-   	product = Product.new(image_url: nil)
-   	product.valid?
-   	expect(product.errors[:image_url]).to include("can't be blank")
-   end
-
    it "is invalid with a price is not an enumerable value"do 
       product = Product.new(price: nil)
    	product.valid?
@@ -49,10 +43,5 @@ require 'spec_helper'
    it "price with a text" do
       product = Product.new(price: "abc")
       product.should_not be_valid
-   end
-   it "test image_url" do
-      product = Product.new(image_url: "abc.doc")
-      product.valid?
-      expect(product.errors[:image_url]).to include("must be a URL for GIF, JPG or PNG image.")
    end
 end

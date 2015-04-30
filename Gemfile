@@ -19,6 +19,9 @@ end
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end
+gem 'simplecov', :require => false, :group => :test
+gem 'simplecov-json', :require => false, :group => :test
+gem 'simplecov-rcov', :require => false, :group => :test
 group :test do
   gem 'capybara'
 end

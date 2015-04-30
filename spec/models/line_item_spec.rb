@@ -8,7 +8,7 @@ describe LineItem do
 
 	it "save item" do
 		item = LineItem.new
-		expect(item.save).to be_truthy
+		item.should be_valid
 	end
 
 	it "create item with product_id and cart_id" do
