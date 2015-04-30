@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150429135101) do
-=======
-ActiveRecord::Schema.define(version: 20150410111403) do
->>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
+ActiveRecord::Schema.define(version: 20150430060904) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -61,7 +57,6 @@ ActiveRecord::Schema.define(version: 20150410111403) do
   add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
   add_index "messages", ["user_id"], name: "index_messages_on_user_id"
 
-<<<<<<< HEAD
   create_table "photos", force: :cascade do |t|
     t.string   "image_uid"
     t.datetime "created_at", null: false
@@ -69,8 +64,14 @@ ActiveRecord::Schema.define(version: 20150410111403) do
     t.integer  "product_id"
   end
 
-=======
->>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -87,38 +88,30 @@ ActiveRecord::Schema.define(version: 20150410111403) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-<<<<<<< HEAD
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-    t.boolean  "confirmable",          default: false
-=======
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.boolean  "confirmable",            default: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "failed_attempts",        default: 0,  null: false
+    t.integer  "failed_attempts",        default: 0,     null: false
     t.string   "unlock_token"
     t.datetime "locked_at"
->>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-<<<<<<< HEAD
-=======
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
->>>>>>> 939426a3587b672c8e89e7858ebec8455e2930ef
 
 end
