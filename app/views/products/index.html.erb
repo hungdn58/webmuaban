@@ -4,32 +4,20 @@
 <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 <td>
 <% if product.photos.any? %>
-	<% product.photos.each do |photo| %>
 	<ul class="row" id="photos-list">
     	<li class="col-xs-3">
-      	<%= link_to image_tag(photo.image.thumb('180x180#').url, class: 'img-thumbnail'),
-        	photo.image.url, target: '_blank' %>
+      	<%= link_to image_tag(product.photos.first.image.thumb('180x180#').url, class: 'img-thumbnail'),
+        	product.photos.first.image.url, target: '_blank' %>
     	</li>
 	</ul>
-<% end %>
 <% else %>
 	<p> No Image </p>
 <% end %>
-<%= image_tag(product.image_url, class: 'list_image') %>
 </td>
 <td class="list_description">
 <dl>
-<dt><%= product.title %></dt>
-<dd><%= truncate(strip_tags(product.description),
-length: 80) %></dd>
+<dt><%= link_to product.title, product %></dt>
 </dl>
-</td>
-<td class="list_actions">
-<%= link_to 'Show', product %><br/>
-<%= link_to 'Edit', edit_product_path(product) %><br/>
-<%= link_to 'Destroy', product,
-data: { confirm: 'Are you sure?' },
-method: :delete %><br/>
 </td>
 </tr>
 <% end %>

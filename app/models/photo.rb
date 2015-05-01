@@ -2,7 +2,7 @@ class Photo < ActiveRecord::Base
 	dragonfly_accessor :image
   
   	belongs_to :product
-
+  	belongs_to :post
   	# validates :image, presence: true
   	validates_size_of :image, maximum: 500.kilobytes,
                     message: "should be no more than 500 KB", if: :image_changed?

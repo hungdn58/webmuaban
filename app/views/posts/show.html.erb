@@ -5,6 +5,24 @@
  <%= link_to 'Edit', edit_post_path(@post) %> |
  <%= link_to 'Back', posts_path %>
 
+ <h2> Image </h2>
+ <% if @post.photos.any? %>
+	<% @post.photos.each do |photo| %>
+	<ul class="row" id="photos-list">
+    	<li class="col-xs-3">
+      	<%= link_to image_tag(photo.image.thumb('180x180#').url, class: 'img-thumbnail'),
+        	photo.image.url, target: '_blank' %>
+    	</li>
+	</ul>
+<% end %>
+<% else %>
+	<p> No Image </p>
+<% end %>
+<%= link_to 'Edit', edit_product_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+<%= link_to "Delete", @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
  <h2>Comments</h2>
  <div id="comments">
    <%= render :partial => @post.comments %>
