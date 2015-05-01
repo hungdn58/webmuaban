@@ -1,8 +1,5 @@
 class Post < ActiveRecord::Base
-	validates :title, :description, presence: true
-	validates :title, uniqueness: true
-	validates :image_url, allow_blank: true, format: {
-		with: %r{\.(gif|jpg|png)\z}i,
-		message: 'must be a URL for GIF, JPG or PNG image.'
-	}
+	validates_presence_of :body, :title
+	belongs_to :user
+	has_many :comments, :as => :commentable
 end

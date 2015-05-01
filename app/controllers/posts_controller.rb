@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_post, :set_commentable, only: [:show, :edit, :update, :destroy]
   # GET /posts
   # GET /posts.json
   def index
@@ -67,8 +66,11 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
+    def set_commentable
+      @commentable = Post.find(params[:id])
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :description, :image_url)
+      params.require(:post).permit(:title, :body, :user_id)
     end
 end

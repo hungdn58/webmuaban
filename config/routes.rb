@@ -19,11 +19,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'posts#index'
   
-  authenticated :user do
-    root 'users#index'
-  end
+  # authenticated :user do
+  #   root 'users#index'
+  # end
  
   unauthenticated :user do
     devise_scope :user do
@@ -35,10 +35,14 @@ Rails.application.routes.draw do
     resources :messages
   end
 
-  resources :products do
-    resources :comments
+  resources :posts do
+    resources :comments, :only => [:create]
   end
 
+  resources :products do
+    resources :comments, :only => [:create]
+  end
+  get 'post/index'
   resources :users do
     resources :comments, :only => [:create]
   end

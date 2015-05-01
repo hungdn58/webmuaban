@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430060904) do
+ActiveRecord::Schema.define(version: 20150430161853) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -21,10 +21,13 @@ ActiveRecord::Schema.define(version: 20150430060904) do
   create_table "comments", force: :cascade do |t|
     t.integer  "product_id"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "user_id"
     t.string   "username"
+    t.integer  "post_id"
+    t.string   "commentable_type"
+    t.integer  "commentable_id"
   end
 
   create_table "conversations", force: :cascade do |t|
@@ -66,10 +69,10 @@ ActiveRecord::Schema.define(version: 20150430060904) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
-    t.text     "description"
-    t.string   "image_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|

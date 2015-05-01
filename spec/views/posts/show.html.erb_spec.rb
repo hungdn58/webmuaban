@@ -4,8 +4,8 @@ describe "posts/show" do
   before(:each) do
     @post = assign(:post, stub_model(Post,
       :title => "Title",
-      :description => "MyText",
-      :image_url => "Image Url"
+      :body => "MyText",
+      :user_id => 1
     ))
   end
 
@@ -14,6 +14,6 @@ describe "posts/show" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Title/)
     rendered.should match(/MyText/)
-    rendered.should match(/Image Url/)
+    rendered.should match(/1/)
   end
 end
