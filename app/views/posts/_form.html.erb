@@ -23,7 +23,7 @@
   <h2> Image </h2>
     <div class="form-group">
       <%= f.label :image, 'Choose files here' %>
-      <%= f.file_field :image, required: true, multiple: true, name: 'post[photos_attributes][][image]' %>
+      <%= f.file_field :image, multiple: true, name: 'post[photos_attributes][][image]' %>
     </div>
     
   <div class="row fileupload-buttonbar">
