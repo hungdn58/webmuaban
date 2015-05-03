@@ -2,7 +2,7 @@
 Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 
 #Các thành viên : 
-             1-Cao Minh Lâm
+ 1-Cao Minh Lâm
              2-Đỗ Ngọc Hùng (Nhóm trưởng)
              3-Trần Đồng Hưng
              4-Vũ Ngọc Đức
@@ -11,16 +11,17 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 #Ngôn ngữ : Ruby 2.0.0 (ngôn ngữ chính); html,css(ngôn ngữ phụ - dùng để thiết kế, làm đẹp giao diện)
 #Framework : Rails - version 4.2.0
 
-#Điều kiện để chạy chương trình lần này : Máy phải cài Ruby on Rails(bất kì phiên bản) và một công cụ đê chạy server client(vd: MySQL Server, Wampserver, Xamp,...)
-(Do chưa tìm được host nên chương trình mình vẫn chạy trên client server cho nên mới phải cài các phần mềm trên)
+#Điều kiện để chạy chương trình mạng local : Máy phải cài Ruby on Rails(bất kì phiên bản) và một công cụ đê chạy server client(vd: MySQL Server, Wampserver, Xamp,...)
 
 #Cách chạy chương trình(phải cài các phần mềm trên trước):
 - Mở Command Prompt, trỏ vào thư mục project
-- Gõ lần lượt các lệnh: bundle install -> rake db:seed -> rails s
+- Gõ lần lượt các lệnh: bundle install -> rake db:migrate -> rails s
 - Sau đó mở trình duyệt web gõ địa chỉ 'localhost:3000'
 Đến đây là có thể thử các tính năng của chương trình rồi.
 
-#Cách chạy test:
+#Link demo sản phẩm: https://tattantat.herokuapp.com
+
+#Cách chạy test với Rspec:
 - Các test nằm trong thư mục spec
 - Mở Command Prompt, trỏ vào thư mục project
 - Gõ lần lượt các lệnh : rake db:migrate RAILS_ENV=test -> bundle exec rspec
@@ -67,7 +68,10 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
       When I press the button 'Create Post'
       Then the result should be the page with my post and the comment field
 
-#Mục tiêu sprint 4 : Hoàn thiện các test và chức năng Send email (email confirm account và forgot password)
+#Mục tiêu sprint 4 :
+- Hoàn thiện chức năng Send email (email confirm account và forgot password).
+- Hoàn thiện Test cho project
+- Cài đặt Test coverage report
 
 #User story: 
 + As a registered user, I want to receive an email confirm my account when I created account successfully, so that I can verify my account and continue shopping.
