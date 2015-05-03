@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>app/models/photo.rb</title>
+    <title>spec/models/conversation_spec.rb</title>
     <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
     <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Webmuaban C0 Coverage Information - Simploco - RCov</h1>
-    <h2>app/models/photo.rb</h2>
+    <h2>spec/models/conversation_spec.rb</h2>
 
     <div class="report_table_wrapper">
       <table class='report' id='report_table'>
@@ -24,9 +24,9 @@
         </thead>
         <tbody>
           <tr>
-            <td class="left_align"><a href="app-models-photo_rb.html">app/models/photo.rb</a></td>
-            <td class='right_align'><tt>12</tt></td>
-            <td class='right_align'><tt>6</tt></td>
+            <td class="left_align"><a href="spec-models-conversation_spec_rb.html">spec/models/conversation_spec.rb</a></td>
+            <td class='right_align'><tt>21</tt></td>
+            <td class='right_align'><tt>14</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -51,40 +51,67 @@
     <table class="details">
       <tbody>
         <tr class="marked">
-          <td><pre><a name="line2">2</a> class Photo &lt; ActiveRecord::Base</pre></td>
+          <td><pre><a name="line2">2</a> require  &#39;spec_helper&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line3">3</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line3">3</a> 	dragonfly_accessor :image</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line4">4</a>   </pre></td>
+          <td><pre><a name="line4">4</a> describe Comment do</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line5">5</a>   	belongs_to :product</pre></td>
+          <td><pre><a name="line5">5</a> 	it &quot;create conversation&quot; do</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line6">6</a>   	belongs_to :post</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line7">7</a>   	# validates :image, presence: true</pre></td>
+          <td><pre><a name="line6">6</a> 		conversation = Conversation.new</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line8">8</a>   	validates_size_of :image, maximum: 500.kilobytes,</pre></td>
+          <td><pre><a name="line7">7</a> 		expect(conversation).to be_valid</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line9">9</a>                     message: &quot;should be no more than 500 KB&quot;, if: :image_changed?</pre></td>
+          <td><pre><a name="line8">8</a> 	end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line10">10</a> </pre></td>
+          <td><pre><a name="line9">9</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line11">11</a>   	validates_property :format, of: :image, in: [:jpeg, :jpg, :png, :bmp], case_sensitive: false,</pre></td>
+          <td><pre><a name="line10">10</a> 	it &quot;save conversation&quot; do</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line11">11</a> 		conversation = Conversation.new</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line12">12</a> 		conversation.should be_valid</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line12">12</a>                      message: &quot;should be either .jpeg, .jpg, .png, .bmp&quot;, if: :image_changed?</pre></td>
+          <td><pre><a name="line13">13</a> 	end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line13">13</a> end</pre></td>
+          <td><pre><a name="line14">14</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line15">15</a> 	it &quot;create conversation with sender_id and recipient_id&quot; do</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line16">16</a> 		user1 = User.new</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line17">17</a> 		user2 = User.new</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line18">18</a> 		conversation = Conversation.new(sender_id: user1.id, recipient_id: user2.id)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line19">19</a> 		expect(conversation.sender_id).to eq user1.id</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line20">20</a> 		expect(conversation.recipient_id).to eq user2.id</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line21">21</a> 	end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line22">22</a> end</pre></td>
         </tr>
       </tbody>
     </table>

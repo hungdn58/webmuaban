@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :responses, :through => :products, :source => :comments , dependent: :destroy
   after_create :create_default_conversation
-  after_create :send_admin_mail
+  # after_create :send_admin_mail
 
   def send_admin_mail
     UserMailer.welcome_email(self).deliver

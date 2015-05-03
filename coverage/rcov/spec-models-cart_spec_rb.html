@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>spec/models/line_item_spec.rb</title>
+    <title>spec/models/cart_spec.rb</title>
     <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
     <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Webmuaban C0 Coverage Information - Simploco - RCov</h1>
-    <h2>spec/models/line_item_spec.rb</h2>
+    <h2>spec/models/cart_spec.rb</h2>
 
     <div class="report_table_wrapper">
       <table class='report' id='report_table'>
@@ -24,9 +24,9 @@
         </thead>
         <tbody>
           <tr>
-            <td class="left_align"><a href="spec-models-line_item_spec_rb.html">spec/models/line_item_spec.rb</a></td>
-            <td class='right_align'><tt>27</tt></td>
-            <td class='right_align'><tt>16</tt></td>
+            <td class="left_align"><a href="spec-models-cart_spec_rb.html">spec/models/cart_spec.rb</a></td>
+            <td class='right_align'><tt>38</tt></td>
+            <td class='right_align'><tt>23</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -57,79 +57,112 @@
           <td><pre><a name="line3">3</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line4">4</a> describe LineItem do</pre></td>
+          <td><pre><a name="line4">4</a> describe Cart do</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line5">5</a> 	it &quot;create item &quot; do</pre></td>
+          <td><pre><a name="line5">5</a> 	it &quot;create cart&quot; do</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line6">6</a> 		item = LineItem.new</pre></td>
+          <td><pre><a name="line6">6</a> 		cart = Cart.new</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line7">7</a> 		expect(item).to be_valid</pre></td>
+          <td><pre><a name="line7">7</a> 		expect(cart).should be_valid</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line8">8</a> 	end</pre></td>
+          <td><pre><a name="line8">8</a> 	end	</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line9">9</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line10">10</a> 	it &quot;save item&quot; do</pre></td>
+          <td><pre><a name="line10">10</a> 	it &quot;test add product&quot; do</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line11">11</a> 		item = LineItem.new</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line12">12</a> 		item.should be_valid</pre></td>
+          <td><pre><a name="line11">11</a> 		product = Product.new(</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line13">13</a> 	end</pre></td>
+          <td><pre><a name="line12">12</a>    	  	title: &#39;Asus&#39;,</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line14">14</a> </pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line15">15</a> 	it &quot;create item with product_id and cart_id&quot; do</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line16">16</a> 		product = Product.new(</pre></td>
+          <td><pre><a name="line13">13</a>    	  	description: &#39;This is a good laptop&#39;,</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line17">17</a>    	  	title: &#39;Asus&#39;,</pre></td>
+          <td><pre><a name="line14">14</a>    	  	image_url: &#39;Asus F550DP.jpg&#39;,</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line18">18</a>    	  	description: &#39;This is a good laptop&#39;,</pre></td>
+          <td><pre><a name="line15">15</a>    	  	price: 200)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line16">16</a>    	  	product.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line17">17</a>    	  	cart = Cart.new</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line18">18</a>    	  	cart.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line19">19</a>    	  	item = cart.add_product(product.id,product.price)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line20">20</a>    	  	item.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line21">21</a>    	  	item.should be_an_instance_of(LineItem)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line22">22</a>    	  	item1 = cart.add_product(product.id,product.price)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line23">23</a>    	  	item1.quantity.should eq 2</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line19">19</a>    	  	image_url: &#39;Asus F550DP.jpg&#39;,</pre></td>
+          <td><pre><a name="line24">24</a> 	end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line20">20</a>    	  	price: 200)</pre></td>
+          <td><pre><a name="line25">25</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line21">21</a>    	  	product.save</pre></td>
+          <td><pre><a name="line26">26</a> 	it &quot;test total price&quot; do</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line22">22</a>    	  	cart = Cart.new(id: 1)</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line23">23</a>    	  	cart.save</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line24">24</a>    	  	item = LineItem.new(product_id: product.id, cart_id: cart.id)</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line25">25</a>    	  	expect(item.product_id).to eq product.id</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line26">26</a>    	  	expect(item.cart_id).to eq cart.id</pre></td>
+          <td><pre><a name="line27">27</a> 		product = Product.new(</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line27">27</a> 	end</pre></td>
+          <td><pre><a name="line28">28</a>    	  	title: &#39;Asus&#39;,</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line28">28</a> end</pre></td>
+          <td><pre><a name="line29">29</a>    	  	description: &#39;This is a good laptop&#39;,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line30">30</a>    	  	image_url: &#39;Asus F550DP.jpg&#39;,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line31">31</a>    	  	price: 200)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line32">32</a>    	  	product.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line33">33</a>    	  	cart = Cart.new</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line34">34</a>    	  	cart.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line35">35</a>    	  	item = cart.add_product(product.id,product.price)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line36">36</a>    	  	item.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line37">37</a>    	  	cart.total_price.should eq 200</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line38">38</a> 	end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line39">39</a> end</pre></td>
         </tr>
       </tbody>
     </table>

@@ -2,6 +2,7 @@
 require 'simplecov'
 require 'simplecov-json'
 require 'simplecov-rcov'
+require 'capybara/email/rspec'
 
 SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,

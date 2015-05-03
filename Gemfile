@@ -24,7 +24,9 @@ gem 'simplecov-json', :require => false, :group => :test
 gem 'simplecov-rcov', :require => false, :group => :test
 group :test do
   gem 'capybara'
+  gem 'email_spec'
 end
+gem 'capybara-email', github: 'dockyard/capybara-email'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
