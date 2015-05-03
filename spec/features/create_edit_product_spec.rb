@@ -24,6 +24,7 @@ feature 'Create and Edit Product' do
 
 		      	fill_in 'product_title', :with => 'New Product'
 		      	fill_in 'product_description', :with => 'This product was made from the Admin Interface'
+		      	attach_file 'Choose files here', File.join(Rails.root, 'public', 'uploads', 'tmp', '1422897108-13576-4844', '1.PNG')
 		      	click_button 'OK'
 
 		      	expect(page).to have_content 'New Product'

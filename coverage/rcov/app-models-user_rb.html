@@ -27,15 +27,15 @@
             <td class="left_align"><a href="app-models-user_rb.html">app/models/user.rb</a></td>
             <td class='right_align'><tt>24</tt></td>
             <td class='right_align'><tt>13</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.67%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:92px"></div>
-        <div class="uncovered" style="width:8px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>84.62%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:85px"></div>
-        <div class="uncovered" style="width:15px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -89,7 +89,7 @@
         <tr class="marked">
           <td><pre><a name="line14">14</a>   def send_admin_mail</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line15">15</a>     UserMailer.welcome_email(self).deliver</pre></td>
         </tr>
         <tr class="inferred">
@@ -113,7 +113,7 @@
         <tr class="marked">
           <td><pre><a name="line22">22</a>   def create_default_conversation</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line23">23</a>     Conversation.create(sender_id: 1, recipient_id: self.id) unless self.id == 1</pre></td>
         </tr>
         <tr class="inferred">
@@ -125,7 +125,7 @@
       </tbody>
     </table>
 
-    <p>Generated on 2015-05-02 23:30:03 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2015-05-03 07:59:25 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>

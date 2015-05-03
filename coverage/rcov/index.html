@@ -19,7 +19,7 @@
         <label>File Filter:</label>
         <select id="file_filter" class="filter">
           <option value="all_files">Show All</option>
-          <option value="app">app/</option><option value="config">config/</option><option value="controllers">controllers/</option><option value="environments">environments/</option><option value="features">features/</option><option value="helpers">helpers/</option><option value="initializers">initializers/</option><option value="models">models/</option><option value="posts">posts/</option><option value="requests">requests/</option><option value="routing">routing/</option><option value="spec">spec/</option><option value="views">views/</option>
+          <option value="app">app/</option><option value="config">config/</option><option value="controllers">controllers/</option><option value="environments">environments/</option><option value="features">features/</option><option value="helpers">helpers/</option><option value="initializers">initializers/</option><option value="mailers">mailers/</option><option value="models">models/</option><option value="posts">posts/</option><option value="requests">requests/</option><option value="routing">routing/</option><option value="spec">spec/</option><option value="views">views/</option>
         </select>
       </fieldset>
       <fieldset>
@@ -46,17 +46,17 @@
         <tfoot>
           <tr>
             <td class="left_align">TOTAL</td>
-            <td class='right_align'><tt>1589</tt></td>
-            <td class='right_align'><tt>651</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>92.83%</tt></div>
+            <td class='right_align'><tt>1617</tt></td>
+            <td class='right_align'><tt>670</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>96.29%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:93px"></div>
-        <div class="uncovered" style="width:7px"></div>
+        <div class="covered" style="width:96px"></div>
+        <div class="uncovered" style="width:4px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class='coverage_total'>82.49%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class='coverage_total'>91.04%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:82px"></div>
-        <div class="uncovered" style="width:18px"></div>
+        <div class="covered" style="width:91px"></div>
+        <div class="uncovered" style="width:9px"></div>
       </div></td>
           </tr>
         </tfoot>
@@ -126,19 +126,19 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 50 60 70 80 90 100 app controllers even">
+            <tr class="all_files all_coverage 80 90 100 app controllers even">
               <td class="left_align"><a href="app-controllers-products_controller_rb.html">app/controllers/products_controller.rb</a></td>
               <td class='right_align'><tt>86</tt></td>
               <td class='right_align'><tt>42</tt></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>73.26%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>88.37%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:73px"></div>
-        <div class="uncovered" style="width:27px"></div>
+        <div class="covered" style="width:88px"></div>
+        <div class="uncovered" style="width:12px"></div>
       </div></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>45.24%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.19%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:45px"></div>
-        <div class="uncovered" style="width:55px"></div>
+        <div class="covered" style="width:76px"></div>
+        <div class="uncovered" style="width:24px"></div>
       </div></td>
             </tr>
           
@@ -334,6 +334,38 @@
       </div></td>
             </tr>
           
+            <tr class="all_files all_coverage 110 app mailers odd">
+              <td class="left_align"><a href="app-mailers-application_mailer_rb.html">app/mailers/application_mailer.rb</a></td>
+              <td class='right_align'><tt>4</tt></td>
+              <td class='right_align'><tt>3</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 app mailers even">
+              <td class="left_align"><a href="app-mailers-user_mailer_rb.html">app/mailers/user_mailer.rb</a></td>
+              <td class='right_align'><tt>8</tt></td>
+              <td class='right_align'><tt>6</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+            </tr>
+          
             <tr class="all_files all_coverage 50 60 70 80 90 100 app models odd">
               <td class="left_align"><a href="app-models-cart_rb.html">app/models/cart.rb</a></td>
               <td class='right_align'><tt>15</tt></td>
@@ -366,7 +398,23 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 90 100 app models odd">
+            <tr class="all_files all_coverage 80 90 100 app models odd">
+              <td class="left_align"><a href="app-models-conversation_rb.html">app/models/conversation.rb</a></td>
+              <td class='right_align'><tt>15</tt></td>
+              <td class='right_align'><tt>9</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>86.67%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:87px"></div>
+        <div class="uncovered" style="width:13px"></div>
+      </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>77.78%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:78px"></div>
+        <div class="uncovered" style="width:22px"></div>
+      </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 90 100 app models even">
               <td class="left_align"><a href="app-models-line_item_rb.html">app/models/line_item.rb</a></td>
               <td class='right_align'><tt>8</tt></td>
               <td class='right_align'><tt>5</tt></td>
@@ -382,7 +430,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 app models even">
+            <tr class="all_files all_coverage 110 app models odd">
               <td class="left_align"><a href="app-models-photo_rb.html">app/models/photo.rb</a></td>
               <td class='right_align'><tt>12</tt></td>
               <td class='right_align'><tt>6</tt></td>
@@ -398,7 +446,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 app models odd">
+            <tr class="all_files all_coverage 110 app models even">
               <td class="left_align"><a href="app-models-post_rb.html">app/models/post.rb</a></td>
               <td class='right_align'><tt>7</tt></td>
               <td class='right_align'><tt>6</tt></td>
@@ -414,7 +462,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 80 90 100 app models even">
+            <tr class="all_files all_coverage 80 90 100 app models odd">
               <td class="left_align"><a href="app-models-product_rb.html">app/models/product.rb</a></td>
               <td class='right_align'><tt>26</tt></td>
               <td class='right_align'><tt>19</tt></td>
@@ -430,23 +478,23 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 90 100 app models odd">
+            <tr class="all_files all_coverage 110 app models even">
               <td class="left_align"><a href="app-models-user_rb.html">app/models/user.rb</a></td>
               <td class='right_align'><tt>24</tt></td>
               <td class='right_align'><tt>13</tt></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.67%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:92px"></div>
-        <div class="uncovered" style="width:8px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>84.62%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:85px"></div>
-        <div class="uncovered" style="width:15px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config even">
+            <tr class="all_files all_coverage 110 config odd">
               <td class="left_align"><a href="config-application_rb.html">config/application.rb</a></td>
               <td class='right_align'><tt>28</tt></td>
               <td class='right_align'><tt>8</tt></td>
@@ -462,7 +510,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config odd">
+            <tr class="all_files all_coverage 110 config even">
               <td class="left_align"><a href="config-boot_rb.html">config/boot.rb</a></td>
               <td class='right_align'><tt>3</tt></td>
               <td class='right_align'><tt>2</tt></td>
@@ -478,7 +526,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config even">
+            <tr class="all_files all_coverage 110 config odd">
               <td class="left_align"><a href="config-environment_rb.html">config/environment.rb</a></td>
               <td class='right_align'><tt>5</tt></td>
               <td class='right_align'><tt>2</tt></td>
@@ -494,7 +542,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config environments odd">
+            <tr class="all_files all_coverage 110 config environments even">
               <td class="left_align"><a href="config-environments-test_rb.html">config/environments/test.rb</a></td>
               <td class='right_align'><tt>42</tt></td>
               <td class='right_align'><tt>13</tt></td>
@@ -510,7 +558,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers even">
+            <tr class="all_files all_coverage 110 config initializers odd">
               <td class="left_align"><a href="config-initializers-assets_rb.html">config/initializers/assets.rb</a></td>
               <td class='right_align'><tt>11</tt></td>
               <td class='right_align'><tt>1</tt></td>
@@ -526,7 +574,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers odd">
+            <tr class="all_files all_coverage 110 config initializers even">
               <td class="left_align"><a href="config-initializers-backtrace_silencers_rb.html">config/initializers/backtrace_silencers.rb</a></td>
               <td class='right_align'><tt>7</tt></td>
               <td class='right_align'><tt>0</tt></td>
@@ -542,7 +590,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers even">
+            <tr class="all_files all_coverage 110 config initializers odd">
               <td class="left_align"><a href="config-initializers-cookies_serializer_rb.html">config/initializers/cookies_serializer.rb</a></td>
               <td class='right_align'><tt>3</tt></td>
               <td class='right_align'><tt>1</tt></td>
@@ -558,7 +606,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers odd">
+            <tr class="all_files all_coverage 110 config initializers even">
               <td class="left_align"><a href="config-initializers-devise_rb.html">config/initializers/devise.rb</a></td>
               <td class='right_align'><tt>259</tt></td>
               <td class='right_align'><tt>13</tt></td>
@@ -574,7 +622,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers even">
+            <tr class="all_files all_coverage 110 config initializers odd">
               <td class="left_align"><a href="config-initializers-dragonfly_rb.html">config/initializers/dragonfly.rb</a></td>
               <td class='right_align'><tt>26</tt></td>
               <td class='right_align'><tt>11</tt></td>
@@ -590,7 +638,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers odd">
+            <tr class="all_files all_coverage 110 config initializers even">
               <td class="left_align"><a href="config-initializers-filter_parameter_logging_rb.html">config/initializers/filter_parameter_logging.rb</a></td>
               <td class='right_align'><tt>4</tt></td>
               <td class='right_align'><tt>1</tt></td>
@@ -606,7 +654,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers even">
+            <tr class="all_files all_coverage 110 config initializers odd">
               <td class="left_align"><a href="config-initializers-inflections_rb.html">config/initializers/inflections.rb</a></td>
               <td class='right_align'><tt>16</tt></td>
               <td class='right_align'><tt>0</tt></td>
@@ -622,7 +670,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers odd">
+            <tr class="all_files all_coverage 110 config initializers even">
               <td class="left_align"><a href="config-initializers-mime_types_rb.html">config/initializers/mime_types.rb</a></td>
               <td class='right_align'><tt>3</tt></td>
               <td class='right_align'><tt>0</tt></td>
@@ -638,7 +686,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers even">
+            <tr class="all_files all_coverage 110 config initializers odd">
               <td class="left_align"><a href="config-initializers-session_store_rb.html">config/initializers/session_store.rb</a></td>
               <td class='right_align'><tt>3</tt></td>
               <td class='right_align'><tt>1</tt></td>
@@ -654,7 +702,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config initializers odd">
+            <tr class="all_files all_coverage 110 config initializers even">
               <td class="left_align"><a href="config-initializers-wrap_parameters_rb.html">config/initializers/wrap_parameters.rb</a></td>
               <td class='right_align'><tt>14</tt></td>
               <td class='right_align'><tt>2</tt></td>
@@ -670,7 +718,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 config even">
+            <tr class="all_files all_coverage 110 config odd">
               <td class="left_align"><a href="config-routes_rb.html">config/routes.rb</a></td>
               <td class='right_align'><tt>97</tt></td>
               <td class='right_align'><tt>24</tt></td>
@@ -686,7 +734,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec controllers odd">
+            <tr class="all_files all_coverage 110 spec controllers even">
               <td class="left_align"><a href="spec-controllers-posts_controller_spec_rb.html">spec/controllers/posts_controller_spec.rb</a></td>
               <td class='right_align'><tt>160</tt></td>
               <td class='right_align'><tt>78</tt></td>
@@ -702,55 +750,55 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 70 80 90 100 spec features even">
+            <tr class="all_files all_coverage 110 spec features odd">
               <td class="left_align"><a href="spec-features-create_edit_product_spec_rb.html">spec/features/create_edit_product_spec.rb</a></td>
-              <td class='right_align'><tt>50</tt></td>
-              <td class='right_align'><tt>30</tt></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.00%</tt></div>
+              <td class='right_align'><tt>51</tt></td>
+              <td class='right_align'><tt>31</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:76px"></div>
-        <div class="uncovered" style="width:24px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>60.00%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:60px"></div>
-        <div class="uncovered" style="width:40px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 60 70 80 90 100 spec features odd">
+            <tr class="all_files all_coverage 110 spec features even">
               <td class="left_align"><a href="spec-features-managing_posts_spec_rb.html">spec/features/managing_posts_spec.rb</a></td>
               <td class='right_align'><tt>81</tt></td>
               <td class='right_align'><tt>45</tt></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.54%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:77px"></div>
-        <div class="uncovered" style="width:23px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>57.78%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:58px"></div>
-        <div class="uncovered" style="width:42px"></div>
-      </div></td>
-            </tr>
-          
-            <tr class="all_files all_coverage 100 spec features even">
-              <td class="left_align"><a href="spec-features-post_comments_spec_rb.html">spec/features/post_comments_spec.rb</a></td>
-              <td class='right_align'><tt>18</tt></td>
-              <td class='right_align'><tt>10</tt></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>94.44%</tt></div>
-      <div class="percent_graph">
-        <div class="covered" style="width:94px"></div>
-        <div class="uncovered" style="width:6px"></div>
-      </div></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.00%</tt></div>
-      <div class="percent_graph">
-        <div class="covered" style="width:90px"></div>
-        <div class="uncovered" style="width:10px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
             </tr>
           
             <tr class="all_files all_coverage 110 spec features odd">
+              <td class="left_align"><a href="spec-features-post_comments_spec_rb.html">spec/features/post_comments_spec.rb</a></td>
+              <td class='right_align'><tt>18</tt></td>
+              <td class='right_align'><tt>10</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 spec features even">
               <td class="left_align"><a href="spec-features-reading_post_page_spec_rb.html">spec/features/reading_post_page_spec.rb</a></td>
               <td class='right_align'><tt>22</tt></td>
               <td class='right_align'><tt>13</tt></td>
@@ -766,7 +814,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec helpers even">
+            <tr class="all_files all_coverage 110 spec helpers odd">
               <td class="left_align"><a href="spec-helpers-photos_helper_spec_rb.html">spec/helpers/photos_helper_spec.rb</a></td>
               <td class='right_align'><tt>15</tt></td>
               <td class='right_align'><tt>3</tt></td>
@@ -782,7 +830,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec helpers odd">
+            <tr class="all_files all_coverage 110 spec helpers even">
               <td class="left_align"><a href="spec-helpers-posts_helper_spec_rb.html">spec/helpers/posts_helper_spec.rb</a></td>
               <td class='right_align'><tt>15</tt></td>
               <td class='right_align'><tt>3</tt></td>
@@ -798,7 +846,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec models even">
+            <tr class="all_files all_coverage 110 spec models odd">
               <td class="left_align"><a href="spec-models-line_item_spec_rb.html">spec/models/line_item_spec.rb</a></td>
               <td class='right_align'><tt>27</tt></td>
               <td class='right_align'><tt>16</tt></td>
@@ -814,7 +862,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec models odd">
+            <tr class="all_files all_coverage 110 spec models even">
               <td class="left_align"><a href="spec-models-photo_spec_rb.html">spec/models/photo_spec.rb</a></td>
               <td class='right_align'><tt>5</tt></td>
               <td class='right_align'><tt>3</tt></td>
@@ -830,7 +878,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec models even">
+            <tr class="all_files all_coverage 110 spec models odd">
               <td class="left_align"><a href="spec-models-post_spec_rb.html">spec/models/post_spec.rb</a></td>
               <td class='right_align'><tt>22</tt></td>
               <td class='right_align'><tt>13</tt></td>
@@ -846,7 +894,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec models odd">
+            <tr class="all_files all_coverage 110 spec models even">
               <td class="left_align"><a href="spec-models-product_spec_rb.html">spec/models/product_spec.rb</a></td>
               <td class='right_align'><tt>57</tt></td>
               <td class='right_align'><tt>34</tt></td>
@@ -862,23 +910,23 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 90 100 spec models even">
+            <tr class="all_files all_coverage 110 spec models odd">
               <td class="left_align"><a href="spec-models-user_spec_rb.html">spec/models/user_spec.rb</a></td>
               <td class='right_align'><tt>72</tt></td>
               <td class='right_align'><tt>46</tt></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>87.50%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:88px"></div>
-        <div class="uncovered" style="width:12px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
-              <td class="left_align"><div class="percent_graph_legend"><tt class=''>80.43%</tt></div>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:80px"></div>
-        <div class="uncovered" style="width:20px"></div>
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec requests odd">
+            <tr class="all_files all_coverage 110 spec requests even">
               <td class="left_align"><a href="spec-requests-posts_spec_rb.html">spec/requests/posts_spec.rb</a></td>
               <td class='right_align'><tt>11</tt></td>
               <td class='right_align'><tt>6</tt></td>
@@ -894,7 +942,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec routing even">
+            <tr class="all_files all_coverage 110 spec routing odd">
               <td class="left_align"><a href="spec-routing-posts_routing_spec_rb.html">spec/routing/posts_routing_spec.rb</a></td>
               <td class='right_align'><tt>35</tt></td>
               <td class='right_align'><tt>17</tt></td>
@@ -910,7 +958,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec views posts odd">
+            <tr class="all_files all_coverage 110 spec views posts even">
               <td class="left_align"><a href="spec-views-posts-edit_html_erb_spec_rb.html">spec/views/posts/edit.html.erb_spec.rb</a></td>
               <td class='right_align'><tt>22</tt></td>
               <td class='right_align'><tt>10</tt></td>
@@ -926,7 +974,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 80 90 100 spec views posts even">
+            <tr class="all_files all_coverage 80 90 100 spec views posts odd">
               <td class="left_align"><a href="spec-views-posts-index_html_erb_spec_rb.html">spec/views/posts/index.html.erb_spec.rb</a></td>
               <td class='right_align'><tt>26</tt></td>
               <td class='right_align'><tt>9</tt></td>
@@ -942,7 +990,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec views posts odd">
+            <tr class="all_files all_coverage 110 spec views posts even">
               <td class="left_align"><a href="spec-views-posts-new_html_erb_spec_rb.html">spec/views/posts/new.html.erb_spec.rb</a></td>
               <td class='right_align'><tt>22</tt></td>
               <td class='right_align'><tt>10</tt></td>
@@ -958,7 +1006,7 @@
       </div></td>
             </tr>
           
-            <tr class="all_files all_coverage 110 spec views posts even">
+            <tr class="all_files all_coverage 110 spec views posts odd">
               <td class="left_align"><a href="spec-views-posts-show_html_erb_spec_rb.html">spec/views/posts/show.html.erb_spec.rb</a></td>
               <td class='right_align'><tt>19</tt></td>
               <td class='right_align'><tt>9</tt></td>
@@ -978,7 +1026,7 @@
       </table>
     </div>
 
-    <p>Generated on 2015-05-02 23:30:03 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2015-05-03 07:59:25 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
     <script type="text/javascript">
       $(document).ready(function(){$("#report_table").tablesorter({widgets: ['zebra'], textExtraction: 'complex'});});

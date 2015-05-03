@@ -12,7 +12,7 @@ feature 'Managing blog posts' do
     fill_in 'Title', :with => 'I love cheese'
     fill_in 'Body', :with => "It's pretty amazing, don't you think?"
 
-    click_button 'Create Post'
+    click_button 'OK'
     expect(page).to have_content 'I love cheese'
   end
 
@@ -27,7 +27,7 @@ feature 'Managing blog posts' do
       click_link 'Edit'
 
       fill_in 'Title', :with => 'Not really Awesome Blog Post'
-      click_button 'Update Post'
+      click_button 'OK'
 
       expect(page).to have_content 'Not really Awesome Blog Post'
     end
@@ -54,7 +54,7 @@ feature 'Managing blog posts' do
 
       fill_in 'post_title', :with => 'New Blog Post'
       fill_in 'post_body', :with => 'This post was made from the Admin Interface'
-      click_button 'Create Post'
+      click_button 'OK'
 
       expect(page).to have_content 'This post was made from the Admin Interface'
     end
@@ -70,7 +70,7 @@ feature 'Managing blog posts' do
         click_link 'Edit'
 
         fill_in 'Title', :with => 'Not really Awesome Blog Post'
-        click_button 'Update Post'
+        click_button 'OK'
 
         expect(page).to have_content 'Not really Awesome Blog Post'
       end

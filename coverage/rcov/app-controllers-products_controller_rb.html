@@ -27,15 +27,15 @@
             <td class="left_align"><a href="app-controllers-products_controller_rb.html">app/controllers/products_controller.rb</a></td>
             <td class='right_align'><tt>86</tt></td>
             <td class='right_align'><tt>42</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>73.26%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>88.37%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:73px"></div>
-        <div class="uncovered" style="width:27px"></div>
+        <div class="covered" style="width:88px"></div>
+        <div class="uncovered" style="width:12px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>45.24%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.19%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:45px"></div>
-        <div class="uncovered" style="width:55px"></div>
+        <div class="covered" style="width:76px"></div>
+        <div class="uncovered" style="width:24px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -68,7 +68,7 @@
         <tr class="marked">
           <td><pre><a name="line7">7</a>   def index</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line8">8</a>     @products = Product.all</pre></td>
         </tr>
         <tr class="inferred">
@@ -125,7 +125,7 @@
         <tr class="marked">
           <td><pre><a name="line26">26</a>   def new</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line27">27</a>     @product = Product.new</pre></td>
         </tr>
         <tr class="inferred">
@@ -155,16 +155,16 @@
         <tr class="marked">
           <td><pre><a name="line36">36</a>   def create</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line37">37</a>     @product = Product.new(product_params)</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line38">38</a> </pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line39">39</a>     respond_to do |format|</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line40">40</a>       if @product.save</pre></td>
         </tr>
         <tr class="uncovered">
@@ -176,10 +176,10 @@
         <tr class="inferred">
           <td><pre><a name="line43">43</a>       else</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line44">44</a>         format.html { render :new }</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line45">45</a>         format.json { render json: @product.errors, status: :unprocessable_entity }</pre></td>
         </tr>
         <tr class="inferred">
@@ -203,19 +203,19 @@
         <tr class="marked">
           <td><pre><a name="line52">52</a>   def update</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line53">53</a>     @product.photos.clear</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line54">54</a>     respond_to do |format|</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line55">55</a>       if @product.update(product_params)</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line56">56</a>         format.html { redirect_to @product, notice: &#39;Product was successfully updated.&#39; }</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line57">57</a>         format.json { render :show, status: :ok, location: @product }</pre></td>
         </tr>
         <tr class="inferred">
@@ -299,7 +299,7 @@
         <tr class="marked">
           <td><pre><a name="line84">84</a>     def product_params</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line85">85</a>       params.require(:product).permit(:title, :description,:price,photos_attributes: [:id, :image, :_destroy])</pre></td>
         </tr>
         <tr class="inferred">
@@ -311,7 +311,7 @@
       </tbody>
     </table>
 
-    <p>Generated on 2015-05-02 23:30:03 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2015-05-03 07:59:25 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
