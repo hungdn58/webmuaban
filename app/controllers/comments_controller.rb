@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
   def new
-    # @product = Product.find(params[:product_id])
     @comment = Comment.new
   end
 
@@ -11,13 +10,13 @@ class CommentsController < ApplicationController
       else params[:post_id]
         @commentable = Post.find(params[:post_id])
       end
-      @comment = @commentable.comments.build(comment_params)
+      @comment = @commentable.comments.new(comment_params)
       @comment.user_id = current_user.id
       @comment.save
 
       respond_to do |format|
           format.html { redirect_to @commentable }
-          # format.js
+          format.js
           format.atom
       end
     end
