@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>config/environment.rb</title>
+    <title>app/models/message.rb</title>
     <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
     <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Webmuaban5 C0 Coverage Information - Simploco - RCov</h1>
-    <h2>config/environment.rb</h2>
+    <h2>app/models/message.rb</h2>
 
     <div class="report_table_wrapper">
       <table class='report' id='report_table'>
@@ -24,9 +24,9 @@
         </thead>
         <tbody>
           <tr>
-            <td class="left_align"><a href="config-environment_rb.html">config/environment.rb</a></td>
-            <td class='right_align'><tt>5</tt></td>
-            <td class='right_align'><tt>2</tt></td>
+            <td class="left_align"><a href="app-models-message_rb.html">app/models/message.rb</a></td>
+            <td class='right_align'><tt>6</tt></td>
+            <td class='right_align'><tt>4</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -50,25 +50,28 @@
 
     <table class="details">
       <tbody>
-        <tr class="inferred">
-          <td><pre><a name="line2">2</a> # Load the Rails application.</pre></td>
+        <tr class="marked">
+          <td><pre><a name="line2">2</a> class Message &lt; ActiveRecord::Base</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line3">3</a> require File.expand_path(&#39;../application&#39;, __FILE__)</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line4">4</a> </pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line5">5</a> # Initialize the Rails application.</pre></td>
+          <td><pre><a name="line3">3</a>   belongs_to :conversation</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line6">6</a> Rails.application.initialize!</pre></td>
+          <td><pre><a name="line4">4</a>   belongs_to :user</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line5">5</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line6">6</a>   validates_presence_of :body, :conversation_id, :user_id</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line7">7</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2015-05-03 23:14:22 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2015-05-03 23:03:32 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
