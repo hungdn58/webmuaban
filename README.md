@@ -85,3 +85,4 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 + Lần 1 : https://docs.google.com/document/d/1sgWrxIkFCB3A7lOqx869b3K8gExd5ncLFZ7RKTwixwM/edit?usp=sharing
 + Lần 2 : https://docs.google.com/document/d/1GKUS6HM4G-Mtw6YxD6T_6YXxQ2uf3WCXNuV_cQgM5wI/edit?usp=sharing
 + Lần 3 : https://docs.google.com/document/d/1VLB88cEn9HrtZrLx1JrV8ehFrQ-i2AWLzRmaUHxOqzw/edit?usp=sharing
++ Lần 4 : https://docs.google.com/document/d/14Rr8jC_SIlk1pBtvggMcsIcokNlxYLKFWVpqVN7DU6o/edit?usp=sharing
