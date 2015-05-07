@@ -80,6 +80,7 @@ Bài thực hành môn công nghệ phần mềm của nhóm Ruby
 #Link video báo cáo : 
 + Sprint 2 : https://youtu.be/BEtk1sjzyrA
 + Sprint 3 : https://www.youtube.com/watch?v=A1XocFFuISo&feature=youtu.be
++ Sprint 4 : https://www.youtube.com/watch?v=uTSPHise5Bw
 
 #Link biên bản họp: 
 + Lần 1 : https://docs.google.com/document/d/1sgWrxIkFCB3A7lOqx869b3K8gExd5ncLFZ7RKTwixwM/edit?usp=sharing
