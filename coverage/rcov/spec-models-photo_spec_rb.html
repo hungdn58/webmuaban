@@ -25,17 +25,17 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="spec-models-photo_spec_rb.html">spec/models/photo_spec.rb</a></td>
-            <td class='right_align'><tt>5</tt></td>
-            <td class='right_align'><tt>3</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+            <td class='right_align'><tt>35</tt></td>
+            <td class='right_align'><tt>20</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>94.29%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:100px"></div>
-        <div class="uncovered" style="width:0px"></div>
+        <div class="covered" style="width:94px"></div>
+        <div class="uncovered" style="width:6px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:100px"></div>
-        <div class="uncovered" style="width:0px"></div>
+        <div class="covered" style="width:90px"></div>
+        <div class="uncovered" style="width:10px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -60,15 +60,105 @@
           <td><pre><a name="line4">4</a> describe Photo do</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line5">5</a>   pending &quot;add some examples to (or delete) #{__FILE__}&quot;</pre></td>
+          <td><pre><a name="line5">5</a> 	it &quot;create photo&quot; do </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line6">6</a> 		@photo = Photo.new(image_uid: &quot;Test&quot;)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line7">7</a> 		@photo.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line8">8</a> 		@photo.image = File.new(&#39;app/assets/images/test.jpg&#39;)</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line9">9</a> 		expect(@photo.image.size).should eq 605915</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line10">10</a> 		expect(@photo.image).should_not be_nil</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line6">6</a> end</pre></td>
+          <td><pre><a name="line11">11</a> 	end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line12">12</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line13">13</a> 	it &quot;create photo with post&quot; do</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line14">14</a> 		photo = Photo.new(image_uid: &quot;Test&quot;)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line15">15</a> 		photo.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line16">16</a> 		post = Post.new(</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line17">17</a> 			photos: [photo],</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line18">18</a>    			title: &#39;Laptop&#39;,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line19">19</a>    			body: &#39;Asus&#39;)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line20">20</a> 		post.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line21">21</a> 		post.photos.should include (photo)</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line22">22</a> 	end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line23">23</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line24">24</a> 	it &quot;create photo with product&quot; do</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line25">25</a> 		photo = Photo.new(image_uid: &quot;Test&quot;)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line26">26</a> 		photo.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line27">27</a> 		product = Product.new(</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line28">28</a> 		photos: [photo],</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line29">29</a>    		title: &#39;Asus&#39;,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line30">30</a>    		description: &#39;This is a good laptop&#39;,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line31">31</a>    		image_url: &#39;Asus F550DP.jpg&#39;,</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line32">32</a>    		price: 200)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line33">33</a> 		product.save</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line34">34</a> 		product.photos.should include (photo)</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line35">35</a> 	end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line36">36</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2015-05-03 23:43:24 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2015-05-08 00:35:58 +0700 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
